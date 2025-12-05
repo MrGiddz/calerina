@@ -1,0 +1,16 @@
+{
+  "extension_name": "Mailchimp Newsletter",
+  "version": "1.0",
+  "controllers": [
+    "app/Http/Controllers/Mailchimp/NewsletterController.php"
+  ],
+  "route": "routes/mailchimp_newsletter.php",
+  "stubs": [
+    "resources/views/default/panel/admin/mailchimpNewsletter/index.blade.php"
+  ],
+  "migrations": {
+    "install": [],
+    "uninstall": []
+  },
+  "delete_old_version_files": []
+}

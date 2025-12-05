@@ -1,0 +1,25 @@
+{
+    "extension_name": "Seo Tool",
+    "version": "2.1",
+    "controllers": [
+        "app/Http/Controllers/SEO/SeoController.php",
+        "app/Services/Search/SerperDev.php",
+		"app/Services/SEO/SEOService.php"
+    ],
+    "route": null,
+    "stubs": {
+        "serper_seo.blade.php": "resources/views/default/panel/admin/settings/particles/serper_seo.blade.php",
+        "serper_seo_site_meta_title.blade.php": "resources/views/default/panel/admin/settings/particles/serper_seo_site_meta_title.blade.php",
+        "serper_seo_site_meta_description.blade.php": "resources/views/default/panel/admin/settings/particles/serper_seo_site_meta_description.blade.php",
+        "serper_seo_aw_keyword.blade.php": "resources/views/default/panel/user/article_wizard/components/serper_seo_aw_keyword.blade.php",
+		"old_article_result.blade.php": "resources/views/default/panel/user/article_wizard/components/article_result.blade.php",
+		"seo_tool.blade.php": "resources/views/default/panel/user/seo-tool/components/seo_tool.blade.php",
+		"seo_tool_navbar.blade.php": "resources/views/default/components/navbar/extnavbars/seo_tool_navbar.blade.php",
+		"index.blade.php": "resources/views/default/panel/user/seo-tool/index.blade.php"
+	},
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    },
+    "delete_old_version_files": []
+}

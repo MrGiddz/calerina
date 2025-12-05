@@ -1,0 +1,64 @@
+# Environment
+.env*
+!.env.example
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Laravel specific
+/public/storage
+/storage/*.key
+/storage/debugbar/
+/storage/framework/cache/data/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/logs/
+/bootstrap/cache/*.php
+/public/hot
+/public/build/
+
+# PHPUnit cache
+.phpunit.result.cache
+
+# IDEs and editors
+/.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node PnP
+/.pnp/
+.pnp.js
+
+# Coverage
+/coverage/
+
+# Homestead / Vagrant
+Homestead.yaml
+/.vagrant/
+
+# Static analysis
+.php_cs.cache
+
+# Misc
+Thumbs.db
+.env.backup
+.env.local
+.env.testing
+
+# Generated IDE helper files
+_ide_helper.php
+_ide_helper_models.php
+
+# Docker
+/.docker/
