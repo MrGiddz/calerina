@@ -53,7 +53,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::group([
     'prefix'     => LaravelLocalization::setLocale(),
     'middleware' => [
-        'localeSessionRedirect', 'localizationRedirect', 'localeViewPath',
+        'localeSessionRedirect',
+        'localizationRedirect',
+        'localeViewPath',
     ],
 ], function () {
 
@@ -341,7 +343,6 @@ Route::group([
 
                 Route::resource('voice', ElevenlabVoiceController::class)->except('show', 'destroy');
                 Route::get('voice/{voice}', [ElevenlabVoiceController::class, 'delete'])->name('voice.destroy');
-
             });
             //Admin Area
             Route::prefix('admin')
@@ -438,7 +439,8 @@ Route::group([
 
                     //Announcements
                     Route::resource('announcements', AnnouncementController::class)->only([
-                        'index', 'store',
+                        'index',
+                        'store',
                     ]);
                     Route::post('announcements/re_notify', [AnnouncementController::class, 're_notify'])->name('announcements.re_notify');
                     Route::post('announcements/reset', [AnnouncementController::class, 'reset'])->name('announcements.reset');
@@ -500,13 +502,16 @@ Route::group([
                     Route::prefix('finance')->name('finance.')->group(function () {
 
                         Route::resource('plan', PlanController::class)->except(
-                            'store', 'update', 'destroy'
+                            'store',
+                            'update',
+                            'destroy'
                         );
 
                         Route::get('plan/{plan}/delete', [PlanController::class, 'destroy'])->name('plan.destroy');
 
                         Route::resource('token-pack-plan', TokenPackPlanController::class)->only(
-                            'create', 'edit'
+                            'create',
+                            'edit'
                         );
 
                         //Plans
@@ -777,9 +782,9 @@ Route::group([
                     Route::post('email-templates/{id}/send', [EmailTemplatesController::class, 'sendQueue']);
 
                     Route::resource('email-templates', EmailTemplatesController::class);
-                    // delete email template route
+
                     Route::get('email-templates/{id}/delete', [EmailTemplatesController::class, 'delete'])
-                        ->name('email-templates.destroy');
+                        ->name('email-templates.delete');  // <-- FIXED
 
                     //Blog
                     Route::prefix('blog')->name('blog.')->group(function () {
